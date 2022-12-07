@@ -8,11 +8,14 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration)
 
 const generateImageAI = async (req, res) => {
+  const { prompt, size } = req.body // passed from the form
+  const sizeImg =
+    size === 'large' ? '1024x1024' : size === 'medium' ? '512x512' : '256x256'
   try {
     const response = await openai.createImage({
-      prompt: 'crocodile on a boat',
+      prompt,
       n: 1,
-      size: '512x512'
+      size: sizeImg
     })
     const url = response.data.data[0].url
 
@@ -20,21 +23,19 @@ const generateImageAI = async (req, res) => {
       success: true,
       url: url
     })
-
   } catch (error) {
-    // for development 
+    // for development
     if (error.response) {
-      console.log(error.response.status);
-      console.log(error.response.data);
+      console.log(error.response.status)
+      console.log(error.response.data)
     } else {
-      console.log(error.message);
+      console.log(error.message)
     }
 
     res.status(400).json({
       success: false,
       error: 'Some error occurred while creating the image'
     })
-    
   }
 }
 module.exports = { generateImageAI }
