@@ -1,0 +1,29 @@
+{
+  "name": "project-image-generator-with-openai",
+  "version": "1.0.0",
+  "description": "\"# Image-Generator-With-OpenAI\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JordiNodeJS/Image-Generator-With-OpenAI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JordiNodeJS/Image-Generator-With-OpenAI/issues"
+  },
+  "homepage": "https://github.com/JordiNodeJS/Image-Generator-With-OpenAI#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "openai": "^3.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
