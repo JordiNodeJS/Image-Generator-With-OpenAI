@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/init.js" defer></script>
+
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <h2>IMAGE GENERATOR</h2>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="showcase">
+        <form id="image-form">
+          <h1>Tell Me Something</h1>
+          <h2>You've been Imagined</h2>
+          <div class="form-control">
+            <input type="text" id="prompt" placeholder="Image Description" value="koala climbing the everest" />
+          </div>
+          <!-- size -->
+          <div class="form-control">
+            <select name="size" id="size">
+              <option value="small">Small</option>
+              <option value="medium" selected>Medium</option>
+              <option value="large">Large</option>
+            </select>
+          </div>
+          <button type="submit" class="btn">Generate</button>
+        </form>
+      </section>
+
+      <section class="image">
+        <div class="image-container">
+          <h2 class="msg"></h2>
+          <img src="" alt="" id="image" />
+        </div>
+      </section>
+    </main>
+
+    <div class="flex">
+      <div id="loading">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </body>
+</html>

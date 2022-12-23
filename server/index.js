@@ -1,4 +1,5 @@
 const express = require('express')
+const cors = require('cors')
 const path = require('path')
 const dotenv = require('dotenv').config()
 const port = process.env.PORT || 3000
@@ -6,6 +7,7 @@ const port = process.env.PORT || 3000
 const app = express()
 
 // Enable to accept body data
+app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 

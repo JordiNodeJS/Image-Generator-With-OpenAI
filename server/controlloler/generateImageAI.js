@@ -34,7 +34,7 @@ const generateImageAI = async (req, res) => {
 
     res.status(400).json({
       success: false,
-      error: 'Some error occurred while creating the image'
+      error: 'Some error occurred while creating the image 👉 ' + error
     })
   }
 }
