@@ -5,7 +5,8 @@
   "scripts": {
     "server": "nodemon index",
     "start": "node index.js",
-    "dev": "node index.js"
+    "dev": "node index.js",
+    "build": "node index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
