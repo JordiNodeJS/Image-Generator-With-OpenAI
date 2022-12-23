@@ -24,8 +24,8 @@ async function generateImageRequest(prompt, size) {
       {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*'
+          'Access-Control-Allow-Origin': '*',
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({
           prompt,
