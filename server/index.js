@@ -8,7 +8,7 @@ const app = express()
 
 // Enable to accept body data
 app.use(cors({
-  origin: ['https://image-generator-with-open-ai.vercel.app', 'http://86.127.229.93', 'http://127.0.0.1:5173']
+  origin: ['https://image-generator-with-open-ai.vercel.app']
 }))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
