@@ -7,7 +7,9 @@ const port = process.env.PORT || 3000
 const app = express()
 
 // Enable to accept body data
-app.use(cors())
+app.use(cors({
+  origin: ['https://image-generator-with-openai.onrender.com', 'https://86.127.229.93']
+}))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
