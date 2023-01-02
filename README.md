@@ -1,4 +1,9 @@
 # Image-Generator-With-OpenAI
+
+###  View it online [here](https://image-generator-with-open-ai.vercel.app/)
+
+## Description
+The app generate an image according to the given description.
 ## Docs
 
 [Github Openai for nodejs](https://github.com/openai/openai-node)
